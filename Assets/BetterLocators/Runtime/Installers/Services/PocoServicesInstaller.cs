@@ -1,4 +1,6 @@
+#if BETTER_SERVICES
 using System;
+using Better.Services.Runtime;
 
 namespace Better.Locators.Runtime.Installers
 {
@@ -7,3 +9,4 @@ namespace Better.Locators.Runtime.Installers
     {
     }
 }
+#endif

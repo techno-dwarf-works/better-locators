@@ -2,12 +2,13 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Better.Attributes.Runtime.Select;
+using Better.Extensions.Runtime.TasksExtension;
 using Better.Locators.Runtime.Installers;
 using UnityEngine;
 
 namespace Better.Locators.Runtime.Contexts
 {
-    public class MonoLocator : MonoBehaviour
+    public class MonoContext : MonoBehaviour
     {
         [Select]
         [SerializeReference] private Installer[] _installers;

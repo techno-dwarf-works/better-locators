@@ -5,10 +5,10 @@
   "unity": "2021.3",
   "description": " ",
   "dependencies": {
-    "com.uurha.betterattributes": "2.1.45"
+    "com.uurha.betterattributes": "2.1.48"
   },
   "author": {
-    "name": "Techno Dwarf Works",
+    "name": "Better Plugins",
     "url": "https://github.com/techno-dwarf-works"
   },
   "changelogUrl": "https://github.com/techno-dwarf-works/better-locator",
@@ -19,12 +19,5 @@
     "locators",
     "reference management",
     "reference distribution"
-  ],
-  "samples": [
-    {
-      "displayName": "Default samples",
-      "description": "Contains test samples",
-      "path": "Samples~/TestSamples"
-    }
   ]
 }

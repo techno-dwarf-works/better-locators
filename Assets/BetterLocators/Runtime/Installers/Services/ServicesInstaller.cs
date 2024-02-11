@@ -1,7 +1,11 @@
+#if BETTER_SERVICES
 using System;
+
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Better.Extensions.Runtime.TasksExtension;
+using Better.Services.Runtime.Interfaces;
 using UnityEngine;
 
 namespace Better.Locators.Runtime.Installers
@@ -39,3 +43,4 @@ namespace Better.Locators.Runtime.Installers
         }
     }
 }
+#endif
