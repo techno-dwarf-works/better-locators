@@ -1,12 +1,10 @@
 {
   "dependencies": {
     "com.tdw.betterservices": {
-      "version": "0.0.2",
+      "version": "0.0.3",
       "depth": 0,
       "source": "registry",
-      "dependencies": {
-        "com.uurha.bettervalidation": "1.0.55"
-      },
+      "dependencies": {},
       "url": "https://package.openupm.com"
     },
     "com.unity.collab-proxy": {
@@ -175,15 +173,6 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {},
-      "url": "https://package.openupm.com"
-    },
-    "com.uurha.bettervalidation": {
-      "version": "1.0.55",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.uurha.bettereditortools": "1.0.62"
-      },
       "url": "https://package.openupm.com"
     },
     "com.unity.modules.ai": {

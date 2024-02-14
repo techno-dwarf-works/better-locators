@@ -2,6 +2,10 @@
 
 namespace Better.Locators.Runtime
 {
+    public class MonoLocator : MonoLocator<MonoBehaviour>
+    {
+    }
+
     public abstract class MonoLocator<TItem> : MonoBehaviour
     {
         protected Locator<TItem> _locator;
@@ -25,9 +29,5 @@ namespace Better.Locators.Runtime
         {
             return _locator.Get<T>();
         }
-    }
-    
-    public class MonoLocator : MonoLocator<MonoBehaviour>
-    {
     }
 }
