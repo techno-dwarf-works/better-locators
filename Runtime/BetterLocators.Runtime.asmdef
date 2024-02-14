@@ -1,0 +1,25 @@
+{
+    "name": "BetterLocators.Runtime",
+    "rootNamespace": "Better.Locators",
+    "references": [
+        "GUID:35101f455c979e94c9a0a4793484b7fd",
+        "GUID:a59e3daedde9ca94bba45364d4ead25f",
+        "GUID:28da8d3b12e3efa47928e0c9070f853d",
+        "GUID:1c5574afb40e5fe4ca9e9c156009297b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.tdw.betterservices",
+            "expression": "0.0.2",
+            "define": "BETTER_SERVICES"
+        }
+    ],
+    "noEngineReferences": false
+}
