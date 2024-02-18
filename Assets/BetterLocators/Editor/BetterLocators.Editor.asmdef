@@ -1,6 +1,6 @@
 {
     "name": "BetterLocators.Editor",
-    "rootNamespace": "Better.Locators",
+    "rootNamespace": "Better.Locators.EditorAddons",
     "references": [
         "GUID:d103b3c6d6cb0564d8d6543e9d797878"
     ],
