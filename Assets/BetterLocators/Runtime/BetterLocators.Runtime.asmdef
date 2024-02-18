@@ -16,8 +16,8 @@
     "defineConstraints": [],
     "versionDefines": [
         {
-            "name": "com.tdw.betterservices",
-            "expression": "0.0.2",
+            "name": "com.tdw.better.services",
+            "expression": "0.0.4",
             "define": "BETTER_SERVICES"
         }
     ],
