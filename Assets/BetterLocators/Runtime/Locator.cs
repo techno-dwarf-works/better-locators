@@ -14,8 +14,9 @@ namespace Better.Locators.Runtime
 
             if (_services.ContainsKey(type))
             {
-                var message = $"[{nameof(Locator<TItem>)}] {nameof(Register)}: Service of type {type} is already registered. Operation cancelled";
+                var message = $"Service of type {type} is already registered. Operation cancelled";
                 Debug.LogError(message);
+                return;
             }
 
             _services[type] = item;
@@ -27,7 +28,7 @@ namespace Better.Locators.Runtime
 
             if (!_services.ContainsKey(type))
             {
-                var message = $"[{nameof(Locator<TItem>)}] {nameof(Unregister)}: Item of type {type} is not registered. Operation cancelled";
+                var message = $"Item of type {type} is not registered. Operation cancelled";
                 Debug.LogError(message);
                 return;
             }
@@ -44,7 +45,7 @@ namespace Better.Locators.Runtime
                 return (T)item;
             }
 
-            var message = $"[{nameof(Locator<TItem>)}] {nameof(Get)}: Item of type {type} is not registered.";
+            var message = $"Item of type {type} is not registered.";
             throw new InvalidOperationException(message);
         }
     }

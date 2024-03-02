@@ -24,7 +24,7 @@ namespace Better.Locators.Runtime.Installers
         {
             if (cancellationToken.IsCancellationRequested)
             {
-                Debug.LogError($"[{nameof(MonoLocatorInstaller<TLocator, TDerived>)}] {nameof(InstallBindingsAsync)}: operation was cancelled");
+                Debug.LogError("Operation was cancelled");
                 return Task.CompletedTask;
             }
 

@@ -1,6 +1,5 @@
 #if BETTER_SERVICES
 using System;
-
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -22,7 +21,7 @@ namespace Better.Locators.Runtime.Installers
             
             if (cancellationToken.IsCancellationRequested)
             {
-                Debug.LogError($"[{nameof(ServicesInstaller<TDerivedService>)}] {nameof(InstallBindingsAsync)}: operation was cancelled");
+                Debug.LogError("Operation was cancelled");
                 return;
             }
 
