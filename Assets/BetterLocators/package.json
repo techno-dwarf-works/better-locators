@@ -5,6 +5,7 @@
   "unity": "2021.3",
   "description": " ",
   "dependencies": {
+    "com.tdw.better.internal.core": "0.0.2",
     "com.uurha.betterattributes": "2.1.48"
   },
   "author": {
