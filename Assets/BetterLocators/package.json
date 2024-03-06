@@ -6,7 +6,8 @@
   "description": " ",
   "dependencies": {
     "com.tdw.better.internal.core": "0.0.2",
-    "com.uurha.betterattributes": "2.1.48"
+    "com.uurha.betterextensions": "1.5.94",
+    "com.uurha.betterattributes": "3.0.11"
   },
   "author": {
     "name": "Better Plugins",
@@ -15,7 +16,7 @@
   "changelogUrl": "https://github.com/techno-dwarf-works/better-locator",
   "documentationUrl": "https://github.com/techno-dwarf-works/better-locator/tree/main#readme",
   "license": "MIT",
-  "licensesUrl":"https://github.com/techno-dwarf-works/better-locator/blob/main/LICENSE",
+  "licensesUrl": "https://github.com/techno-dwarf-works/better-locator/blob/main/LICENSE",
   "keywords": [
     "locators",
     "reference management",
