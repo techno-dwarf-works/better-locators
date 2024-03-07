@@ -27,7 +27,7 @@ namespace Better.Locators.Runtime.Installers
 
             for (int i = 0; i < _services.Length; i++)
             {
-                ServiceLocator.RegisterService(_services[i]);
+                ServiceLocator.Register(_services[i]);
             }
 
             await _services.Select(x => x.PostInitializeAsync(cancellationToken)).WhenAll();
@@ -37,7 +37,7 @@ namespace Better.Locators.Runtime.Installers
         {
             for (int i = 0; i < _services.Length; i++)
             {
-                ServiceLocator.UnregisterService<IService>(_services[i]);
+                ServiceLocator.Unregister<IService>(_services[i]);
             }
         }
     }
