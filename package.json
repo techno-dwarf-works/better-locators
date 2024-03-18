@@ -1,13 +1,13 @@
 {
   "name": "com.tdw.better.locator",
   "displayName": "Better Locator",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "unity": "2021.3",
   "description": " ",
   "dependencies": {
     "com.tdw.better.internal.core": "0.0.2",
-    "com.uurha.betterextensions": "1.5.94",
-    "com.uurha.betterattributes": "3.0.11"
+    "com.uurha.betterextensions": "1.5.98",
+    "com.uurha.betterattributes": "3.0.13"
   },
   "author": {
     "name": "Better Plugins",
