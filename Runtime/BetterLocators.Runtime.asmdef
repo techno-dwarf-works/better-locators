@@ -2,9 +2,9 @@
     "name": "BetterLocators.Runtime",
     "rootNamespace": "Better.Locators.Runtime",
     "references": [
+        "GUID:01df13aca8d01e24a911bcc3e8277031",
+        "GUID:8bd4b41f8da90144d9006c4d926c9679",
         "GUID:35101f455c979e94c9a0a4793484b7fd",
-        "GUID:a59e3daedde9ca94bba45364d4ead25f",
-        "GUID:28da8d3b12e3efa47928e0c9070f853d",
         "GUID:1c5574afb40e5fe4ca9e9c156009297b"
     ],
     "includePlatforms": [],
@@ -17,7 +17,7 @@
     "versionDefines": [
         {
             "name": "com.tdw.better.services",
-            "expression": "0.0.4",
+            "expression": "0.1.0",
             "define": "BETTER_SERVICES"
         }
     ],
