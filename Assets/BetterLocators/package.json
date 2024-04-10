@@ -1,22 +1,22 @@
 {
   "name": "com.tdw.better.locator",
-  "displayName": "Better Locator",
-  "version": "0.0.8",
+  "displayName": "Better Locators",
+  "version": "0.1.0",
   "unity": "2021.3",
   "description": " ",
   "dependencies": {
     "com.tdw.better.internal.core": "0.0.2",
-    "com.uurha.betterextensions": "1.5.98",
-    "com.uurha.betterattributes": "3.0.13"
+    "com.tdw.better.commons": "0.0.2",
+    "com.uurha.betterattributes": "3.1.0"
   },
   "author": {
     "name": "Better Plugins",
     "url": "https://github.com/techno-dwarf-works"
   },
-  "changelogUrl": "https://github.com/techno-dwarf-works/better-locator",
-  "documentationUrl": "https://github.com/techno-dwarf-works/better-locator/tree/main#readme",
+  "changelogUrl": "https://github.com/techno-dwarf-works/better-locators",
+  "documentationUrl": "https://github.com/techno-dwarf-works/better-locators/tree/main#readme",
   "license": "MIT",
-  "licensesUrl": "https://github.com/techno-dwarf-works/better-locator/blob/main/LICENSE",
+  "licensesUrl": "https://github.com/techno-dwarf-works/better-locators/blob/main/LICENSE",
   "keywords": [
     "locators",
     "reference management",
