@@ -6,8 +6,8 @@
   "description": " ",
   "dependencies": {
     "com.tdw.better.internal.core": "0.0.2",
-    "com.uurha.betterextensions": "1.5.94",
-    "com.uurha.betterattributes": "3.0.11"
+    "com.tdw.better.commons": "0.0.4",
+    "com.uurha.betterattributes": "3.1.1"
   },
   "author": {
     "name": "Better Plugins",

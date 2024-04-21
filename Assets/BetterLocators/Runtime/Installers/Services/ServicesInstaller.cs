@@ -3,7 +3,8 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Better.Extensions.Runtime;
+using Better.Attributes.Runtime.Select;
+using Better.Commons.Runtime.Extensions;
 using Better.Services.Runtime.Interfaces;
 using UnityEngine;
 
@@ -13,31 +14,31 @@ namespace Better.Locators.Runtime.Installers
     public abstract class ServicesInstaller<TDerivedService> : Installer
         where TDerivedService : class, IService
     {
-        [SerializeReference] private TDerivedService[] _services;
+        protected abstract TDerivedService[] Services { get; }
 
         public override async Task InstallBindingsAsync(CancellationToken cancellationToken)
         {
-            await _services.Select(x => x.InitializeAsync(cancellationToken)).WhenAll();
-            
+            await Services.Select(x => x.InitializeAsync(cancellationToken)).WhenAll();
+
             if (cancellationToken.IsCancellationRequested)
             {
                 Debug.LogError("Operation was cancelled");
                 return;
             }
 
-            for (int i = 0; i < _services.Length; i++)
+            for (int i = 0; i < Services.Length; i++)
             {
-                ServiceLocator.Register(_services[i]);
+                ServiceLocator.Register(Services[i]);
             }
 
-            await _services.Select(x => x.PostInitializeAsync(cancellationToken)).WhenAll();
+            await Services.Select(x => x.PostInitializeAsync(cancellationToken)).WhenAll();
         }
 
         public override void UninstallBindings()
         {
-            for (int i = 0; i < _services.Length; i++)
+            for (int i = 0; i < Services.Length; i++)
             {
-                ServiceLocator.Unregister<IService>(_services[i]);
+                ServiceLocator.Unregister<IService>(Services[i]);
             }
         }
     }
