@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using Better.Commons.Runtime.Utility;
+using Better.Locators.Runtime.Awaiters;
 
 namespace Better.Locators.Runtime
 {
@@ -22,7 +25,7 @@ namespace Better.Locators.Runtime
             }
 
             var type = item.GetType();
-            if (HasRegistered<T>())
+            if (HasRegistered(type))
             {
                 var message = $"{nameof(item)} of type {type} is already registered. Operation cancelled";
                 DebugUtility.LogException<InvalidOperationException>(message);
@@ -35,6 +38,11 @@ namespace Better.Locators.Runtime
         public bool HasRegistered<T>() where T : TItem
         {
             var type = typeof(T);
+            return HasRegistered(type);
+        }
+
+        private bool HasRegistered(Type type)
+        {
             return _typeItemsMap.ContainsKey(type);
         }
 
@@ -47,7 +55,7 @@ namespace Better.Locators.Runtime
             }
 
             var type = item.GetType();
-            if (!HasRegistered<T>())
+            if (!HasRegistered(type))
             {
                 var message = $"{nameof(item)} of type {type} is not registered. Operation cancelled";
                 DebugUtility.LogException<InvalidOperationException>(message);
@@ -68,6 +76,11 @@ namespace Better.Locators.Runtime
             var message = $"Element type {type} is not registered";
             DebugUtility.LogException<InvalidOperationException>(message);
             return default;
+        }
+
+        public Task<T> GetAsync<T>(CancellationToken token) where T : TItem
+        {
+            return new LocatorGetAwaiter<TItem, T>(this, token).Task;
         }
     }
 }
