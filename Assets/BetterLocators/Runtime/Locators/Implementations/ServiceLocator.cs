@@ -1,4 +1,6 @@
 ﻿#if BETTER_SERVICES
+using System.Threading;
+using System.Threading.Tasks;
 using Better.Services.Runtime.Interfaces;
 using UnityEngine;
 
@@ -38,6 +40,11 @@ namespace Better.Locators.Runtime
         public static T Get<T>() where T : IService
         {
             return _internalLocator.Get<T>();
+        }
+        
+        public static Task<T> GetAsync<T>(CancellationToken token = default) where T : IService
+        {
+            return _internalLocator.GetAsync<T>(token);
         }
     }
 }

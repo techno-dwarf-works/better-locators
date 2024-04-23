@@ -38,7 +38,7 @@ namespace Better.Locators.Runtime.Installers
         {
             for (int i = 0; i < Services.Length; i++)
             {
-                ServiceLocator.Unregister<IService>(Services[i]);
+                ServiceLocator.Unregister(Services[i]);
             }
         }
     }
