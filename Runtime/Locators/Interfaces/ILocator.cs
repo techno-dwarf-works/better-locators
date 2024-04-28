@@ -1,6 +1,5 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using Better.Services.Runtime.Interfaces;
 
 namespace Better.Locators.Runtime
 {
