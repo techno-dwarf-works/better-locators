@@ -1,6 +1,6 @@
 ﻿namespace Better.Locators.Runtime
 {
-    public abstract class PocoLocator<TItem> : ILocator<TItem>
+    public class PocoLocator<TItem> : ILocator<TItem>
     {
         protected ILocator<TItem> _internalLocator;
 
