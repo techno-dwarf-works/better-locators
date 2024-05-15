@@ -6,7 +6,7 @@ using Better.Locators.Runtime.Awaiters;
 
 namespace Better.Locators.Runtime
 {
-    public static class ILocatorExtension
+    public static class ILocatorExtensions
     {
         public static bool TryGet<TBase, TItem>(this ILocator<TBase> self, out TItem item)
             where TItem : TBase

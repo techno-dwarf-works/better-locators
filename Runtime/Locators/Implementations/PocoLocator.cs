@@ -4,7 +4,7 @@
     {
         protected ILocator<TItem> _internalLocator;
 
-        protected PocoLocator()
+        public PocoLocator()
         {
             _internalLocator = new InternalLocator<TItem>();
         }
