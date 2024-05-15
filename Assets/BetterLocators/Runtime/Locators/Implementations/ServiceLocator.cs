@@ -41,10 +41,11 @@ namespace Better.Locators.Runtime
         {
             return _internalLocator.Get<T>();
         }
-        
-        public static Task<T> GetAsync<T>(CancellationToken token = default) where T : IService
+
+        public static Task<T> GetAsync<T>(CancellationToken token = default)
+            where T : IService
         {
-            return _internalLocator.GetAsync<T>(token);
+            return _internalLocator.GetAsync<IService, T>(token);
         }
     }
 }
