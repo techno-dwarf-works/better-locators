@@ -77,10 +77,5 @@ namespace Better.Locators.Runtime
             DebugUtility.LogException<InvalidOperationException>(message);
             return default;
         }
-
-        public Task<T> GetAsync<T>(CancellationToken token) where T : TItem
-        {
-            return new LocatorGetAwaiter<TItem, T>(this, token).Task;
-        }
     }
 }
