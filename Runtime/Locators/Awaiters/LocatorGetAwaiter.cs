@@ -25,7 +25,6 @@ namespace Better.Locators.Runtime.Awaiters
 
         protected override void OnCompleted(TValue result)
         {
-
         }
     }
 }
