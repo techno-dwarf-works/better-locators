@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Better.Commons.Runtime.Extensions;
 using Better.Commons.Runtime.Utility;
 
 namespace Better.Locators.Runtime
@@ -15,9 +16,13 @@ namespace Better.Locators.Runtime
 
         public int Count => _sourceMap.Count;
 
-        public Locator()
+        public Locator(IEqualityComparer<TKey> comparer)
         {
-            _sourceMap = new();
+            _sourceMap = new(comparer);
+        }
+
+        public Locator() : this(EqualityComparer<TKey>.Default)
+        {
         }
 
         public delegate void OnElementChanged(TKey key, TElement element);
@@ -114,13 +119,13 @@ namespace Better.Locators.Runtime
                 return false;
             }
 
-            var removed = true; TKey key = default; //_sourceMap.Remove(element, out var key); TODO: Commons DictionaryExtensions dependency
-            if (removed)
+            if (_sourceMap.Remove(element, out var key))
             {
                 OnRemoved(key, element);
+                return true;
             }
 
-            return removed;
+            return false;
         }
 
         protected virtual void OnRemoved(TKey key, TElement element)
