@@ -2,7 +2,6 @@
     "name": "BetterLocators.Runtime",
     "rootNamespace": "Better.Locators.Runtime",
     "references": [
-        "GUID:35101f455c979e94c9a0a4793484b7fd",
         "GUID:1c5574afb40e5fe4ca9e9c156009297b",
         "GUID:8bd4b41f8da90144d9006c4d926c9679"
     ],
