@@ -16,7 +16,7 @@
     "versionDefines": [
         {
             "name": "com.tdw.better.services",
-            "expression": "0.1.0",
+            "expression": "0.1.1",
             "define": "BETTER_SERVICES"
         }
     ],
