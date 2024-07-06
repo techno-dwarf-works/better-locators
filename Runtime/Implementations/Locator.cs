@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
+using Better.Commons.Runtime.DataStructures.SerializedTypes;
 using Better.Commons.Runtime.Extensions;
 using Better.Commons.Runtime.Utility;
+using UnityEngine;
 
 namespace Better.Locators.Runtime
 {
+    [Serializable]
     public class Locator<TKey, TElement> : ILocator<TKey, TElement>
     {
         public event Action Changed;
         public event OnElementChanged ElementAdded;
         public event OnElementChanged ElementRemoved;
 
-        private Dictionary<TKey, TElement> _sourceMap;
+        [SerializeField] private SerializedDictionary<TKey, TElement> _sourceMap;
 
         public int Count => _sourceMap.Count;
 
@@ -146,7 +150,29 @@ namespace Better.Locators.Runtime
         }
     }
 
-    public class Locator<TElement> : Locator<Type, TElement>
+    [Serializable]
+    public class Locator<TElement> : Locator<SerializedType, TElement>//, ISerializationCallbackReceiver
     {
+        // [SerializeField] private TElement[] _elements;
+        //
+        // void ISerializationCallbackReceiver.OnBeforeSerialize()
+        // {
+        //     _elements = GetElements();
+        // }
+        //
+        // void ISerializationCallbackReceiver.OnAfterDeserialize()
+        // {
+        //     if (_elements == null)
+        //     {
+        //         DebugUtility.LogException<SerializationException>();
+        //         return;
+        //     }
+        //
+        //     Clear();
+        //     foreach (var element in _elements)
+        //     {
+        //         this.TryAdd(element);
+        //     }
+        // }
     }
 }
