@@ -51,6 +51,11 @@ namespace Better.Locators.Runtime
         {
             return _source.ContainsKey<IService, TService>();
         }
+        
+        public static bool HasRegistered(Type type)
+        {
+            return _source.ContainsKey(type);
+        }
 
         public static bool TryGet<TService>(out TService service)
             where TService : IService
@@ -78,9 +83,9 @@ namespace Better.Locators.Runtime
                 return;
             }
 
-            if (!HasRegistered<TService>())
+            var type = service.GetType();
+            if (!HasRegistered(type))
             {
-                var type = typeof(TService);
                 var message = $"{nameof(service)} of {nameof(type)}({type}) not registered";
                 DebugUtility.LogException<InvalidOperationException>(message);
 
